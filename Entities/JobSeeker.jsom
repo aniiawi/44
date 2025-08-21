@@ -1,0 +1,56 @@
+{
+  "name": "JobSeeker",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "ID пользователя"
+    },
+    "target_companies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Целевые компании"
+    },
+    "experience_years": {
+      "type": "number",
+      "description": "Лет опыта"
+    },
+    "current_position": {
+      "type": "string",
+      "description": "Текущая должность"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Навыки"
+    },
+    "resume_url": {
+      "type": "string",
+      "description": "Ссылка на резюме"
+    },
+    "desired_salary": {
+      "type": "number",
+      "description": "Желаемая зарплата"
+    },
+    "bio": {
+      "type": "string",
+      "description": "О себе"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "default": "active",
+      "description": "Статус поиска"
+    }
+  },
+  "required": [
+    "user_id"
+  ]
+}
