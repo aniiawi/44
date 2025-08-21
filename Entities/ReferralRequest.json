@@ -1,0 +1,38 @@
+{
+  "name": "ReferralRequest",
+  "type": "object",
+  "properties": {
+    "job_seeker_id": {
+      "type": "string",
+      "description": "ID соискателя"
+    },
+    "referrer_id": {
+      "type": "string",
+      "description": "ID референса"
+    },
+    "target_company": {
+      "type": "string",
+      "description": "Целевая компания"
+    },
+    "message": {
+      "type": "string",
+      "description": "Сообщение от соискателя"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted",
+        "rejected",
+        "completed"
+      ],
+      "default": "pending",
+      "description": "Статус заявки"
+    }
+  },
+  "required": [
+    "job_seeker_id",
+    "referrer_id",
+    "target_company"
+  ]
+}

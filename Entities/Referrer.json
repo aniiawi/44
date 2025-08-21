@@ -1,0 +1,52 @@
+{
+  "name": "Referrer",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "ID пользователя"
+    },
+    "current_company": {
+      "type": "string",
+      "description": "Текущая компания"
+    },
+    "position": {
+      "type": "string",
+      "description": "Должность"
+    },
+    "companies_can_refer": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Компании, куда может дать реферал"
+    },
+    "specializations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Специализации, по которым может дать реферал"
+    },
+    "bio": {
+      "type": "string",
+      "description": "О себе"
+    },
+    "referral_fee": {
+      "type": "number",
+      "description": "Комиссия за реферал"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "default": "active",
+      "description": "Статус активности"
+    }
+  },
+  "required": [
+    "user_id"
+  ]
+}
